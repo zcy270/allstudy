@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		.div1{
+			background: red;
+			width: 300px;
+			height: 300px;
+		}
+		.div2{
+			background: black;
+			width: 100px;
+			height: 100px;
+			color: white;
+		}
+
+	</style>
+	
+</head>
+
+<body>
+
+
+
+	<div class="div1" onclick="setText.call(this)">
+		<div class="div2"></div>
+	</div>
+	<script src="jquery-1.11.0.js"></script>
+	<script>
+		function setText(){
+			$(this).children(".div2").text("1111")
+
+		}
+
+
+		var x=1;
+		function foo(x){
+			function y(){x=2;};
+			y();
+			console.log(x);
+			var x=3;
+			console.log(x);
+		}
+		foo();
+		console.log(x);
+
+
+	</script>
+</body>
+
+</html>
